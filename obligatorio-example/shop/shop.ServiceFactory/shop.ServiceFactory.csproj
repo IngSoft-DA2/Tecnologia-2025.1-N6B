@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\shop.BusinessLogic\shop.BusinessLogic.csproj" />
+    <ProjectReference Include="..\shop.DataAccess\shop.DataAccess.csproj" />
+    <ProjectReference Include="..\shop.Domain\shop.Domain.csproj" />
+    <ProjectReference Include="..\shop.IDataAccess\shop.IDataAccess.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

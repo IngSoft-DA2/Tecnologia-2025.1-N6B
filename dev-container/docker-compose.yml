@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+    - "8000:5001"
+    - "8001:5000"
+    volumes:
+        - ./Starwars:/src/Starwars
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    # command: ["dotnet", "watch", "run", "--project", "/src/dc.api/dc.api.csproj", "--no-launch-profile", "--urls", "http://+:80"]
+    command: sleep infinity
+    depends_on:
+      - db
+  db:
+    image: "mcr.microsoft.com/azure-sql-edge:latest"
+    environment:
+      SA_PASSWORD: "MyPass@word"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"

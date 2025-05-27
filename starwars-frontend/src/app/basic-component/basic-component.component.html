@@ -1,0 +1,8 @@
+<p>basic-component works!</p>
+<button (click)="createPerson()">Create</button>
+<p>{{ response }}</p>
+
+<div *ngFor="let number of numbers">
+    <input type="checkbox" [disabled]="isDisabled(number)" />
+</div>
+
